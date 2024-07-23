@@ -10,6 +10,21 @@ python = "3.12.*"
 fastapi = "^0.111.1"
 
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.4"
+
+[tool.ruff]
+line-length = 79
+extend-exclude = ['migrations']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
